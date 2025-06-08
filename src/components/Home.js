@@ -1,7 +1,13 @@
 import React from "react";
 import "./Home.css";
+import { useNavigate } from "react-router-dom";
+
+
 
 function Home() {
+
+  const navigate = useNavigate();
+
   return (
     <div className="home-container">
       <section className="hero-section">
@@ -10,7 +16,7 @@ function Home() {
           Crafting tailored software solutions for startups, businesses, and industries.
           Empowering your growth with technology and innovation.
         </p>
-        <button className="cta-button" onClick={() => window.location.href="/Contact"}>
+        <button className="cta-button" onClick={() => navigate("/Contact")}>
           Get in Touch
         </button>
       </section>
@@ -50,7 +56,7 @@ function Home() {
 
       <section className="final-cta">
         <h2>Ready to transform your business?</h2>
-        <button className="cta-button" onClick={() => window.location.href="/Contact"}>
+        <button className="cta-button" onClick={() => navigate("/Contact")}>
           Contact Us Today
         </button>
       </section>
