@@ -1,3 +1,14 @@
+/* index.css or App.css */
+
+html, body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222; /* Optional: default text color */
+  background-color: #fff; /* Optional: default bg */
+}
+
 .App {
   text-align: center;
 }
