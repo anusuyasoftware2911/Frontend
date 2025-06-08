@@ -13,6 +13,7 @@ function App() {
       <HashRouter>
         <Nav/>
         <Routes>
+          <Route path='/' element={<Home/>}></Route>
           <Route path='/Home' element={<Home/>}></Route>
           <Route path='/Projects' element={<Projects/>}></Route>
           <Route path='/AboutUs' element={<About/>}></Route>
