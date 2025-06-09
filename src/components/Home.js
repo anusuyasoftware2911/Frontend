@@ -1,63 +1,90 @@
 import React from "react";
-import "./Home.css";
 import { useNavigate } from "react-router-dom";
-
-
+import "./Home.css";
 
 function Home() {
-
   const navigate = useNavigate();
 
   return (
     <div className="home-container">
-      <section className="hero-section">
+      {/* Top Welcome Heading */}
+      <section className="welcome-heading">
         <h1>Welcome to Anusuya Software Solutions</h1>
+      </section>
+
+      {/* Hero Section */}
+      <section className="hero-section">
+        <h2>
+          Building <span>Web Applications</span><br />for Clinics, Schools & SMEs
+        </h2>
         <p>
-          Crafting tailored software solutions for startups, businesses, and industries.
-          Empowering your growth with technology and innovation.
+          We craft end‑to‑end digital platforms—appointment systems, CRMs,
+          student portals, IoT dashboards—complete with AI chatbots,
+          secure payments, and lifetime support.
         </p>
         <button className="cta-button" onClick={() => navigate("/Contact")}>
-          Get in Touch
+          Schedule a Free Demo
         </button>
       </section>
 
+      {/* Value Proposition */}
       <section className="value-prop">
-        <h2>Why Choose Us?</h2>
+        <h2>Why Anusuya Software Solutions?</h2>
         <ul>
-          <li>Customized software tailored exactly to your needs.</li>
-          <li>Full-stack web applications with scalable and robust architecture.</li>
-          <li>Integration with AI and chatbots for smarter workflows.</li>
-          <li>Lifetime support & maintenance packages.</li>
-          <li>Transparent pricing and client-first approach.</li>
+          <li><strong>Domain‑Focused:</strong> healthcare, education, and small‑scale industries.</li>
+          <li><strong>AI Inside:</strong> WhatsApp/chatbot automation, GPT‑powered assistants.</li>
+          <li><strong>Full‑Stack Ownership:</strong> UX → API → DevOps on MERN.</li>
+          <li><strong>Secure Payments:</strong> Stripe / Razorpay integration out of the box.</li>
+          <li><strong>Lifetime Care:</strong> updates, monitoring & on‑call support.</li>
         </ul>
       </section>
 
+      {/* Services */}
       <section className="services-section">
-        <h2>Our Core Services</h2>
+        <h2>What We Build</h2>
         <div className="services-cards">
           <div className="card">
-            <h3>Web & Mobile Development</h3>
-            <p>Full-stack scalable apps with React, Node.js, MongoDB and more.</p>
+            <h3>Clinic & Hospital Suites</h3>
+            <p>
+              Patient EMR, appointment booking, e‑prescriptions, tele‑health,
+              payment reconciliation, and WhatsApp reminders.
+            </p>
           </div>
+
           <div className="card">
-            <h3>AI & Chatbot Integration</h3>
-            <p>Smart chatbots and AI-powered solutions tailored for your business.</p>
+            <h3>School / Coaching Portals</h3>
+            <p>
+              Online admissions, fee collection, attendance & LMS—plus parent
+              chatbots and progress analytics.
+            </p>
           </div>
+
           <div className="card">
-            <h3>Custom Software Solutions</h3>
-            <p>End-to-end software built specifically for your unique workflows.</p>
+            <h3>Industry Dashboards</h3>
+            <p>
+              Inventory, production KPIs, IoT sensor feeds, and real‑time alerts
+              for manufacturing or warehouse ops.
+            </p>
           </div>
+
           <div className="card">
-            <h3>Support & Maintenance</h3>
-            <p>Reliable support with lifetime software updates and troubleshooting.</p>
+            <h3>Custom AI Chatbots</h3>
+            <p>
+              Meta WhatsApp, web widgets, multilingual NLP and GPT
+              integrations that automate FAQ, booking, and lead capture.
+            </p>
           </div>
         </div>
       </section>
 
+      {/* Final CTA */}
       <section className="final-cta">
-        <h2>Ready to transform your business?</h2>
+        <h2>
+          Ready to deploy a platform <br className="mobile-break" />
+          that works like <em>your</em> business does?
+        </h2>
         <button className="cta-button" onClick={() => navigate("/Contact")}>
-          Contact Us Today
+          Talk to an Expert
         </button>
       </section>
     </div>

@@ -47,3 +47,15 @@ html, body {
     transform: rotate(360deg);
   }
 }
+
+/* Make the whole app a column flex container to push footer down */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make content area grow and push footer down */
+.app-container > *:not(.footer) {
+  flex-grow: 1;
+}

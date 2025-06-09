@@ -1,0 +1,137 @@
+.footer {
+    height: 200px;
+    background-color: #0a0a0a;
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    /* center the footer-content */
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    bottom: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ccc;
+}
+
+/* Container for all footer elements */
+.footer-content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    /* limit width on large screens */
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Left side navigation + copyright + socials */
+.footer-nav,
+.footer-copy,
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Navigation links styling */
+.footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: #adff2f;
+    /* limegreen glow accent */
+}
+
+/* Copyright text */
+.footer-copy {
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+/* Social links container */
+.footer-socials a {
+    color: #ccc;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-socials a:hover,
+.footer-socials a:focus {
+    background-color: #adff2f;
+    color: #000;
+}
+
+/* Logo container on right side */
+.footer-logo-container {
+    flex-shrink: 0;
+}
+
+/* Logo styling with glow & pop animation */
+.footer-logo {
+    width: 120px;
+    border-radius: 8px;
+    box-shadow:
+        0 0 12px 4px rgba(173, 255, 47, 0.6),
+        0 0 8px 2px rgba(255, 255, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.footer-logo:hover {
+    box-shadow:
+        0 0 25px 10px rgba(173, 255, 47, 0.9),
+        0 0 18px 6px rgba(255, 255, 255, 0.4);
+}
+
+@keyframes popInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+/* Responsive: stack footer content on smaller screens */
+@media (max-width: 768px) {
+    .footer {
+        height: auto;
+        padding: 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-nav,
+    .footer-copy,
+    .footer-socials {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-logo {
+        width: 100px;
+    }
+}

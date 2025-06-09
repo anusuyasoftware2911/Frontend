@@ -144,3 +144,30 @@
     width: 90%;
   }
 }
+
+.hero-section h2 span {
+  color: greenyellow;
+}
+.value-prop ul li {
+  margin-bottom: 14px;
+}
+.value-prop ul li::before {
+  content: "✔";
+  color: #4fc3f7;
+  margin-right: 8px;
+}
+.mobile-break { display: none; }
+@media (max-width: 768px) {
+  .mobile-break { display: inline; }
+}
+
+.welcome-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome-heading h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+}

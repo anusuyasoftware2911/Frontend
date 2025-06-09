@@ -57,7 +57,7 @@ html, body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -127,4 +127,51 @@ html, body {
   .sidebar-toggle {
     display: block;
   }
+}
+
+.brand img {
+  border-radius: 8px; /* optional, rounded corners */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* optional subtle shadow */
+}
+
+@keyframes popInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.brand-logo {
+  width: 150px;
+  margin: 0 auto 15px;
+  display: block;
+  border-radius: 8px;
+  box-sizing: border-box;
+
+  /* Breathing pop animation */
+  animation: popInOut 3s ease-in-out infinite;
+
+  /* Stronger glow effect */
+box-shadow:
+  0 0 12px 4px rgba(173, 255, 47, 0.6),
+  0 0 8px 2px rgba(255, 255, 255, 0.3);
+}
+
+.brand img {
+  border-radius: 8px; /* rounded corners */
+  box-sizing: border-box;
+
+  /* Strong greenyellow glow */
+box-shadow:
+  0 0 12px 4px rgba(173, 255, 47, 0.6),
+  0 0 8px 2px rgba(255, 255, 255, 0.3);
+
+  /* Breathing pop animation */
+  animation: popInOut 3s ease-in-out infinite;
+
+  width: 150px;
+  margin: 0 auto 10px; /* Reduced gap from 15px to 10px */
+  display: block;
 }
