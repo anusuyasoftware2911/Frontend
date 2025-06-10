@@ -41,6 +41,9 @@ function Nav() {
             <Link to="/Projects" onClick={() => setCollapsed(false)}>Our Projects</Link>
           </li>
           <li>
+            <Link to="/Pricing" onClick={() => setCollapsed(false)}>Our Plans</Link>
+          </li>
+          <li>
             <Link to="/AboutUs" onClick={() => setCollapsed(false)}>About Us</Link>
           </li>
           <li>

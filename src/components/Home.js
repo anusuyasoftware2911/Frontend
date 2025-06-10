@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../components/logo_anusuya_main.png";
 import "./Home.css";
 
 function Home() {
@@ -10,6 +11,9 @@ function Home() {
       {/* Top Welcome Heading */}
       <section className="welcome-heading">
         <h1>Welcome to Anusuya Software Solutions</h1>
+        <div className="logo-wrapper">
+          <img src={logo} alt="Anusuya Logo" className="welcome-logo" />
+        </div>
       </section>
 
       {/* Hero Section */}

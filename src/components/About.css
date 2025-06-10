@@ -1,8 +1,8 @@
 .about-container {
-  padding: 60px 30px;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f5f5f5;
   line-height: 1.8;
 }
@@ -15,51 +15,67 @@
 .about-header h1 {
   font-size: 3rem;
   font-weight: 800;
-  color: #ffffff;
   margin-bottom: 20px;
   letter-spacing: 1px;
+  background: linear-gradient(270deg, white, greenyellow, white);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: floatColors 5s ease infinite;
+}
+
+@keyframes floatColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .about-header p {
-  font-size: 1.25rem;
-  color: #cccccc;
+  font-size: 1.2rem;
+  color: #ccc;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.7;
 }
 
+/* Generic Section Styles */
 section {
   margin-bottom: 60px;
 }
 
 section h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: white;
   margin-bottom: 20px;
-  /* border-left: 4px solid #4fc3f7; */
-  padding-left: 12px;
+  padding-left: 8px;
 }
 
 section p {
-  font-size: 1.125rem;
-  color: #dddddd;
+  font-size: 1.1rem;
+  color: #ddd;
   line-height: 1.75;
+  text-align: justify;
 }
 
-/* Core Values List */
+/* Core Values */
 .core-values ul {
   list-style: none;
   padding-left: 0;
-  margin-top: 10px;
 }
 
 .core-values li {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   margin-bottom: 12px;
-  position: relative;
   padding-left: 24px;
-  color: #cccccc;
+  position: relative;
+  color: #ccc;
 }
 
 .core-values li::before {
@@ -74,42 +90,102 @@ section p {
 .founder-section {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 .founder-section img {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   object-fit: cover;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 4px solid #4fc3f7;
-  box-shadow: 0 0 20px rgba(79, 195, 247, 0.2);
+  box-shadow: 0 0 15px rgba(79, 195, 247, 0.3);
 }
 
-.founder-section .founder-bio {
+.founder-bio {
   flex: 1;
+  min-width: 250px;
+  max-width: 600px;
 }
 
-.founder-section .founder-bio h3 {
-  font-size: 1.5rem;
-  color: #ffffff;
+.founder-bio h3 {
+  font-size: 1.4rem;
+  color: white;
   margin-bottom: 10px;
 }
 
-.founder-section .founder-bio p {
-  color: #bbbbbb;
-  font-size: 1.1rem;
+.founder-bio p {
+  font-size: 1.05rem;
+  color: #bbb;
   line-height: 1.6;
 }
 
-/* Tech Stack Highlight */
-.tech-stack-section p {
-  font-size: 1.125rem;
+/* Tech Stack */
+.tech-stack-section p,
+.tech-stack-section li {
+  font-size: 1.1rem;
   color: #e0e0e0;
 }
 
-.tech-stack-section p strong {
-  color: #4fc3f7;
+.tech-stack-section strong {
+  color: greenyellow;
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+}
+
+.cta-button {
+  background-color: white;
+  color: #000;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
   font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: greenyellow;
+  color: #000;
+}
+
+/* ===== Mobile optimisation (≤ 768 px) ===== */
+@media (max-width: 768px) {
+
+  /* 1️⃣ Container */
+  .about-container {
+    padding: 40px 16px;          /* a bit narrower side‑padding   */
+    max-width: 100%;             /* let it use the full viewport  */
+  }
+
+  /* 2️⃣ Headings */
+  .about-header h1           { font-size: 3rem; }
+  .about-header p            { font-size: 1rem;  }
+  section h2                 { font-size: 1.4rem; }
+
+  /* 3️⃣ Founder block – stack vertically */
+  .founder-section {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;         /* centre the text when stacked */
+  }
+  .founder-section img        { width: 140px; height: 140px; }
+
+  /* 4️⃣ Lists */
+  .core-values li,
+  .tech-stack-section li      { font-size: 1rem; line-height: 1.6; }
+
+  /* 5️⃣ Call‑to‑action button */
+  .cta-button {
+    width: 90%;
+    max-width: 320px;           /* big easy tap‑target */
+    margin: 0 auto;
+  }
 }

@@ -10,9 +10,28 @@
 
 .projects-container h1 {
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 3rem;
+  font-weight: 700;
   margin-bottom: 50px;
-  color: #fff;
+
+  background: linear-gradient(270deg, #ffffff, #adff2f, #ffffff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientFloat 5s ease infinite, sparkle 2s infinite linear;
+  position: relative;
+}
+
+@keyframes gradientFloat {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
 }
 
 .project-grid {

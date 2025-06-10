@@ -6,6 +6,7 @@ import Projects from './components/Projects/Projects';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Pricing from './components/Pricing';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='/Projects' element={<Projects />} />
           <Route path='/AboutUs' element={<About />} />
           <Route path='/Contact' element={<Contact />} />
+           <Route path='/Pricing' element={<Pricing />} />
         </Routes>
         <Footer />
       </HashRouter>

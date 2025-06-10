@@ -169,5 +169,77 @@
 .welcome-heading h1 {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  background: linear-gradient(270deg, #ffffff, #adff2f, #ffffff); /* white → greenyellow → white */
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFloat 5s ease infinite, sparkle 2s infinite linear;
+  position: relative;
+}
+
+@keyframes gradientFloat {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Optional sparkle effect using subtle opacity pulsing */
+@keyframes sparkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.welcome-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 0 25px 8px rgba(172, 255, 47, 0.817);
+  animation: slowRotate 40s linear infinite;
+  cursor: pointer;
+}
+
+/* Tooltip attached to wrapper instead */
+.logo-wrapper::after {
+  content: "The Logo symbolises:\A🧠 A web of connected nodes\A💡 AI + Automation\A🔗 Seamless system integration";
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 280px;
+  background: rgba(40, 40, 40, 0.85);
+  backdrop-filter: blur(6px);
+  color: #f8f8f8;
+  font-size: 0.85rem;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(172, 255, 47, 0.3);
+  box-shadow: 0 4px 12px rgba(172, 255, 47, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 999;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Show tooltip on hover with motion */
+.logo-wrapper:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0px);
+}
+
+/* Rotation */
+@keyframes slowRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

@@ -10,7 +10,7 @@ function About() {
     <div className="about-container">
       {/* -------- HERO / INTRO -------- */}
       <section className="about-header">
-        <h1>About Anusuya Software Solutions</h1>
+        <h1>About Us</h1>
         <p>
           We’re a modern software studio on a mission to <strong>digitalise clinics, schools, and
           emerging businesses</strong> with intelligent web applications that are as unique as the people
