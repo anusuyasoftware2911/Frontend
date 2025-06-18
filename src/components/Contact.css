@@ -126,3 +126,22 @@
     flex-direction: column;
   }
 }
+
+.status {
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.status.success {
+  color: #4fc3f7;
+}
+
+.status.error {
+  color: #ff6b6b;
+}
+
+.status.sending {
+  color: #bbb;
+}
