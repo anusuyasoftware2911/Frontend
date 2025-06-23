@@ -1,18 +1,45 @@
-/* index.css or App.css */
-
+/* === GLOBAL RESET === */
 html, body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #222; /* Optional: default text color */
-  background-color: #fff; /* Optional: default bg */
+  color: #ffffff;
+  background-color: #000;
+  background-image: url("./components/galaxy.jpg"); /* ✅ update path accordingly */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+/* Optional overlay for better text readability */
+
+/* body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); 
+  z-index: -1;
+} */
+
+/* Flex layout for pushing footer down */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-container > *:not(.footer) {
+  flex-grow: 1;
+}
+
+/* Optional UI polish */
 .App {
   text-align: center;
 }
 
+/* Floating logo animation (keep if needed) */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -24,21 +51,6 @@ html, body {
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -46,16 +58,4 @@ html, body {
   to {
     transform: rotate(360deg);
   }
-}
-
-/* Make the whole app a column flex container to push footer down */
-.app-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* Make content area grow and push footer down */
-.app-container > *:not(.footer) {
-  flex-grow: 1;
 }
